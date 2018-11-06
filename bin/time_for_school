@@ -7,14 +7,31 @@ require_relative "../lib/student.rb"
 steve = Student.new
 steve.first_name = "Steve"
 steve.last_name = "Jobs"
+matt = Student.new
+matt.first_name = "Matt"
+matt.last_name = "Readout"
 
 avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "James"
 
-some_knowledge = avi.teach 
+# jim.learn
+
+some_knowledge = avi.teach
+more_knowledge = avi.teach
+some_more_knowledge = avi.teach
+even_more_knowledge = avi.teach
 
 steve.learn(some_knowledge)
+steve.learn(some_more_knowledge)
+matt.learn(more_knowledge)
+matt.learn(even_more_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+puts "Steve learned from Avi: #{steve.knowledge}"
+puts "Matt learned from Avi: #{matt.knowledge}"
